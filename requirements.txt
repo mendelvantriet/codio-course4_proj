@@ -1,2 +1,5 @@
 django~=5.2.0
 djangorestframework
+django-configurations
+django-debug-toolbar
+requests
