@@ -4,3 +4,7 @@ django-configurations
 django-debug-toolbar
 PyGithub
 requests
+
+celery
+django-celery-results
+redis
