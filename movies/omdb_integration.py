@@ -1,10 +1,15 @@
 import logging
 import re
 from datetime import timedelta
+
+import django.dispatch
 from django.utils.timezone import now
+
 from movies.models import Genre, SearchTerm, Movie
 from omdb.django_client import get_client_from_settings
 
+
+movie_filled = django.dispatch.Signal()
 logger = logging.getLogger(__name__)
 
 
@@ -38,6 +43,7 @@ def fill_movie_details(movie):
         movie.genres.add(genre)
     movie.is_full_record = True
     movie.save()
+    movie_filled.send(sender=fill_movie_details, movie=movie)
 
 
 def search_and_save(search):
