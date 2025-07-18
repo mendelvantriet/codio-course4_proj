@@ -1,5 +1,9 @@
 # Course4_proj
 
+This repository contains practice assignments for the [Coursera](https://www.coursera.org/) course [Advanced Django: External APIs and Task Queuing](https://www.coursera.org/learn/codio-advanced-django-external-apis-task-queuing).
+It is the fourth course in the Specialization [Advanced Django: Mastering Django and Django Rest Framework Specialization](https://www.coursera.org/specializations/codio-advanced-django-and-django-rest-framework).
+The practice assignments of the first three courses can be found in [this repo](https://github.com/mendelvantriet/codio-blango). 
+
 ## Dependencies
 
 Redis
@@ -9,7 +13,7 @@ sudo apt install -y redis
 redis-cli ping
 ```
 
-## Commands
+## Django Commands
 
 ```commandline
 DJANGO_OMDB_KEY="..." python3 manage.py movie_search django unchained
